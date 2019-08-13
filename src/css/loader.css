@@ -1,0 +1,26 @@
+.loader {
+    --loaderSize: 2.5em;
+    --loaderBorder: 3px solid;
+    width: var(--loaderSize);
+    height: var(--loaderSize);
+    border: var(--loaderBorder) #f3f3f3;
+    border-radius: 2em;
+    animation: 1s ease load infinite;
+}
+
+@keyframes load {
+    0% {
+        border-top: var(--loaderBorder) #3498db;
+        transform: rotate(0deg)
+    }
+    25% {
+        border-top: var(--loaderBorder) #34dbb1;
+    }
+    75% {
+        border-top: var(--loaderBorder) #34acdb;
+    }
+    100% {
+        border-top: var(--loaderBorder) #457ce2;
+        transform: rotate(360deg)
+    }
+}

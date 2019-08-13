@@ -1,0 +1,29 @@
+.content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.content > .information {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 10px 10px;
+}
+
+.information > h4 {
+    text-align: right
+}
+
+.information > p {
+    text-align: left
+}
+
+.Alive, .alive {
+    color: var(--successColor) 
+}
+
+.Dead, .dead {
+    color: var(--dangerColor) 
+}

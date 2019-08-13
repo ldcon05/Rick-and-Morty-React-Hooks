@@ -1,0 +1,7 @@
+.card {
+    border-radius: 3px;
+    box-shadow: 0 3px 3px 0px var(--borderColor);
+    color: var(--color);
+    overflow: hidden;
+    font-family: 'Montserrat', serif;
+}
