@@ -7,7 +7,7 @@ import Loader from './loader'
 
 import useCharacter from '../hooks/useCharacter'
 
-import '../css/board.css'
+import '../assets/css/board.css'
 
 const Board = ({page, scrollHandler, boardRef}) => {
     const { characters, loading } = useCharacter(page)

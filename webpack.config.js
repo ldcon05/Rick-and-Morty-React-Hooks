@@ -1,19 +1,21 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
     mode: "development",
     entry: {
-        home: path.resolve(__dirname, 'src/index.js'),
+        home: path.resolve(__dirname, 'src', 'index.js'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "[name].js"
+        filename: "[name].js",
+        publicPath: 'http://localhost:8080'
     },
     devServer: {
-        hot: true
+        contentBase: path.resolve(__dirname, 'dist'),
+        hot: true,
+        compress: true,
     },
     module: {
         rules: [
@@ -30,7 +32,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(png|jpg|gif|ttf|eot|woff|woff2|svg)$/i,
                 use: [
                     {
                         loader: "url-loader",
@@ -46,7 +48,7 @@ module.exports = {
         new HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             title: 'My App',
-            template: path.resolve(__dirname, 'index.html'),
+            template: path.resolve(__dirname, 'public', 'index.html'),
         })
     ]
 } 
