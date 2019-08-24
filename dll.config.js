@@ -6,7 +6,9 @@ module.exports = {
     entry: {
         modules: [
             "react",
-            "react-dom"
+            "react-dom",
+            "prop-types",
+            "axios"
         ]
     },
     output: {
