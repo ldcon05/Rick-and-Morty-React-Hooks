@@ -10,12 +10,12 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "[name].js",
-        publicPath: 'http://localhost:8080'
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
         hot: true,
         compress: true,
+	    host: "0.0.0.0"
     },
     module: {
         rules: [
@@ -50,5 +50,9 @@ module.exports = {
             title: 'My App',
             template: path.resolve(__dirname, 'public', 'index.html'),
         })
-    ]
+    ],
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
+    }
 } 

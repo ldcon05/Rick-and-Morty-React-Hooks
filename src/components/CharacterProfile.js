@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import getDate from '../helpers/formatDate'
 
-import '../assets/css/CharacterProfile.css'
+import '../assets/css/characterProfile.css'
 
 const CharacterProfile = ({title, status, image, character }) => {
     const statusClassType = `${status} margin-top-sm`
